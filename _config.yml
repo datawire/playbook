@@ -9,7 +9,7 @@
 title: Datawire Microservices Playbook
 email: your-email@domain.com
 description: ''
-baseurl: 'datawire_microservices_playbook'
+baseurl: '/datawire_microservices_playbook'
 url: ''
 permalink: pretty
 
