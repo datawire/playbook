@@ -16,6 +16,7 @@ permalink: pretty
 collections:
   playbook:
     output: true
+    permalink: /:collection/:path/
 
 # Build settings
 markdown: kramdown
