@@ -1,0 +1,304 @@
+---
+layout: page
+title: 'What are microservices?'
+anchors:
+- name: should-i-adopt
+  title: 'Should I adopt?'
+- name: how-do-i-adopt
+  title: 'How do I adopt?'
+- name: how-your-stack-changes
+  title: 'How your stack changes'
+---
+<h1>The Microservices Playbook</h1>
+
+<p class="intro">Over the past year, the Datawire team has spent time with some of the leading cloud software companies in the world, learning about their journey into microservices. This playbook is a distillation of these learnings. Our goal in producing the playbook is to help developers think about microservices and avoid the common pitfalls that occur in adopting microservices.</p>
+
+
+<h2>What are microservices? Should I adopt?</h2>
+<p>
+  Microservices is a software architecture that is gaining rapid adoption by cloud native companies. Popularized by companies such as Netflix, Gilt Groupe, Twitter, and HubSpot, microservices enable organizations to dramatically shorten the time required to bring new functionality to market. Traditional cloud applications were built and deployed as a single unit. With microservices, software applications are built as a set of loosely coupled, self-contained services that connect to each other over a network. Ultimately, microservices can accelerate innovation, as they empower small development teams to quickly test and iterate with real market feedback and data.
+</p>
+
+<img src="#" alt="design new graphic" width="600" height="320" />
+
+
+<p>
+  For example, the Twitter homepage consists of dozens of microservices, including a “who to follow” microservice, a “trends” microservice, a “tweets” microservice, and many others -- some of which in turn call other microservices. The key to a successful microservices architecture is the loose coupling, which enables each microservice to be developed, tested, and released independently of the other microservices.
+</p>
+
+<h4>Isn’t this just SOA?</h4>
+<p>
+  Many people frequently point out that the core concepts of microservices were pioneered in service oriented architectures (SOA). While there are some technical similarities between microservices and SOA, microservices is focused on a different class of problems -- how to (organizationally, computationally) scale your cloud-native application architecture -- and takes advantage of cloud and DevOps technologies to create a more powerful, flexible approach to software architecture for cloud-native applications.
+</p>
+
+
+<h4 id="should-i-adopt">Should I adopt microservices?</h4>
+
+<p>Today, organizations considering adopting microservices should make this decision based on three criteria:</p>
+
+
+<ol>
+  <li>
+    Organizational support for accelerating the customer feedback loop. Fundamentally, the business needs to agree that getting customer and market feedback faster is a key priority.
+  </li>
+  <li>
+    Your organization’s current and anticipated capabilities for adopting new technologies and approaches. Successful adoption of a microservices architecture requires a commitment to learning and adopting new technologies. Organizations that tend to be more conservative in learning and adopting new technology choices may not be ready for microservices today.
+  </li>
+  <li>
+    The size of your development organization. The benefits of microservices compound with the size of the development team. The larger the development team, the greater the benefits of a microservice architecture.
+  </li>
+</ol>
+
+
+<h4>So should small, conservative development organizations shy away from microservices? </h4>
+
+<p>
+  Not necessarily. Even small development teams can benefit from the incrementally adopting microservices patterns. A common example is the deployment of a standalone microservice for search (e.g., Elastic Search), which enables a developer to iterate and release improved search features without requiring changes to the main application. Moreover, this design pattern allows the search microservice to be reused elsewhere.
+</p>
+
+
+<h4 id="how-do-i-adopt">What is involved in adopting microservices?</h4>
+
+
+<h5>There are 2 things to think about:</h5>
+<ol>
+  <li>Software architecture: can I adopt microservices incrementally or do i need to go wholesale?
+    <ul>
+      <li>You can experiment/test incrementally.</li>
+    </ul>
+  </li>
+  <li>Changes to your stack (and do you need to make them wholesale)
+    <ul>
+      <li>deploy using your existing stack</li>
+    </ul>
+  </li>
+</ol>
+
+<h4>Do I have to adopt microservices wholesale?</h4>
+
+<p>An important consideration in the question of adopting microservices is that a microservices architecture is not an all-or-nothing proposition. Organizations can (and should) add microservices a few at a time, as business requirements and organizational needs dictate.
+</p>
+
+<h4 id="how-your-stack-changes">
+  How your stack changes: <br />
+  The new DevOps/Microservices stack.
+</h4>
+
+<p>The rapid evolution of DevOps and microservices has resulted in a rapidly changing technology stack. A typical monolithic stack looks like this:</p>
+
+<img src="#" alt-"how your stack changes" width="600" height"160" />
+
+
+<p>Label: Traditional Monolith Stack</p>
+
+<p>Adopting a microservice architecture requires a technology stack that supports two major paradigm shifts:</p>
+
+<ol><li>Microservices separates an application’s business logic into smaller components. The software stack needs to support connecting these smaller components into a complete application.</li>
+  <li>Individual microservices need to be quickly and easily developed, tested, and released to customers. The deployment infrastructure must support rapid iteration and release of individual microservices.</li>
+</ol><p>Organizations incrementally update their stack as needed to support microservices. Consider the Netflix technology stack, circa 2012:</p>
+
+<p>Netflix is deployed on Amazon Web Services. Circa 2012, Netflix used a deployment infrastructure common to AWS deployments: <a href="https://www.google.com/url?q=http://techblog.netflix.com/2012/01/auto-scaling-in-amazon-cloud.html&amp;sa=D&amp;usg=AFQjCNGliRlmdrTri_re1DLQo7nflCygvA">AWS Auto Scaling Groups for resource management</a>, with individual<a href="https://www.google.com/url?q=http://techblog.netflix.com/2013/03/ami-creation-with-aminator.html&amp;sa=D&amp;usg=AFQjCNGXPwjbVleIVaHPsIiKHxXvY5K6JA">microservices packaged into AMIs</a>. Netflix then uses a homegrown set of technologies for the service infrastructure, including <a href="https://www.google.com/url?q=https://github.com/Netflix/eureka&amp;sa=D&amp;usg=AFQjCNEP11fKjeCgNbvIINeYj453uC9iBw">Eureka</a> and <a href="https://www.google.com/url?q=https://github.com/Netflix/Hystrix&amp;sa=D&amp;usg=AFQjCNGUV5mRwdB5NCdmuQH4QIOABgVXhQ">Hystrix</a>.</p>
+
+<p>The Netflix stack, while open source, assumes that your organization should make the exact same technology choices they did(e.g., AWS, Java). In addition, the Netflix stack is difficult to incrementally adopt. Fortunately, a number of open source technologies are gaining traction, and enable organizations to adopt a complete end-to-end microservices stack:</p>
+
+<p>In the microservices stack, the deployment infrastructure changes:</p>
+
+<ul>
+  <li>Microservices are deployed in containers, which provide a lightweight mechanism to fully package a microservice and all its dependencies. Unlike VMs, containers share a kernel with other containers, enabling a container to be much lighter weight. And unlike systems packaging technologies, a container is designed to include all the dependencies of a given microservice.</li>
+  <li>A container-based resource manager and scheduling system allocates compute resources on demand to containers, replacing a traditional VM-centric resource scheduler.</li>
+</ul>
+
+<p>A microservice stack also introduces several new service-level technologies. These technologies are used to add service-level resilience so that the unavailability of a given microservice has no effect on the overall system behavior.</p>
+
+<ul>
+  <li>A service discovery and routing framework is used to route traffic between microservices. A service discovery and routing framework provides a real-time view of service availability via health checks, and can use that information to dynamically route traffic to available microservices. While DNS can be used for service discovery, it typically isn’t directly used due to propagation delays, lack of native health checks, and limited control over routing.<sup><href="#ftnt1" name="ftnt_ref1">[1]</href="#ftnt1"></sup></li>
+  <li>An application protocol that provides efficient and reliable communication is deployed to connect microservices. Unlike HTTP, a microservices application protocol is non-blocking, and also introduces other behaviors such as timeouts and retries to improve resilience.</li>
+</ul>
+
+<p>Do you need all of these pieces to start adopting microservices? Not at all. In the next example, we’ll show an example application built using a microservices architecture.</p>
+
+<h3>The Microwizard: From Monolith to Microservices</h3>
+
+<p>Few organizations adopt a microservice architecture all at once. Much more common is an organization that has developed a functional cloud application (“the monolith”) and incrementally adopts microservices. We’ll illustrate this by showing a new feature written and deployed as a microservice, rather than being directly added to the monolith.</p>
+
+<p>We’ve set up an example, the Microwizard, in a Vagrant VM that you can try. The Microwizard is a Getting Started tool for developers with no experience with microservice architectures who want to learn more about them. It lets you get your feet wet and see some of the benefits of microservices by starting with a common adoption pattern: adding a single microservice to an existing monolith (as the first step in migrating from a monolith to a microservices architecture). This enables more rapid feature development of the new service without any possibility of unintentionally inducing bugs into the existing code.</p>
+
+<p>By default, Microwizard ships with and uses an existing Ruby on Rails application named <a href="https://www.google.com/url?q=https://github.com/jcs/lobsters&amp;sa=D&amp;usg=AFQjCNFJ4Rmb8eBthniUhDImLF4rA1Mx_w">Lobsters</a> as the demonstration monolith. We will walk you through how to add new functionality to the main Lobsters application by creating a microservice in Python (you do not need to know Python to understand this example).</p>
+
+<p>The Microwizard uses the following simplified technology stack:</p>
+
+<p>The Microwizard uses both Ruby on Rails (for the monolith) and Python/Flask (for the microservice). The services are connected directly using HTTP, which is sufficient for a small scale microservices deployment. <a href="https://www.google.com/url?q=http://bakerstreet.io&amp;sa=D&amp;usg=AFQjCNGfCgcuxm9MTRgV-kfmGoiyuM7qhQ">Baker Street</a> is used for service discovery and routing, as it provides a simple setup and configuration experience. The monolith, popularity microservice, and database are all deployed in individual Docker containers.</p>
+
+<p>The Microwizard simplifies a few components of the technology stack in the interest of simplicity, as noted above. It’s deployed on a single Vagrant virtual machine. It also does not deploy a resource management framework such as Kubernetes or Docker Swarm. Both of these issues would need to be addressed in a production architecture.</p>
+
+<h3>The Microwizard:</h3>
+
+<h4>Getting Everything Set Up</h4>
+
+<p>The Microwizard base system runs inside of a VirtualBox VM. We provision the VM using Vagrant and then use a combination of shell scripts, Ansible playbooks, and custom code to smooth over the experience. Developers must be running a modern Linux distribution or Mac OS X (we’ve tested on Fedora 22 and OS 10.10 Yosemite) and should have the following software installed before trying to use Datawire Microwizard:</p>
+
+
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr><td colspan="1" rowspan="1"><p>Software</p></td>
+      <td colspan="1" rowspan="1"><p>Version</p></td>
+      <td colspan="1" rowspan="1"><p>Instructions</p></td>
+    </tr>
+
+    <tr>
+      <td colspan="1" rowspan="1">
+        <p>Ansible</p>
+      </td>
+      <td colspan="1" rowspan="1"><p>&gt;=1.9.4</p></td>
+      <td colspan="1" rowspan="1"><code><p>pip ansible install</p></code>
+
+        <p>or</p>
+
+        <p>see the official [install](http://docs.ansible.com/ansible/intro_installation.html) instructions</p>
+      </td>
+    </tr>
+
+    <tr><td colspan="1" rowspan="1"><p>Vagrant</p></td>
+      <td colspan="1" rowspan="1"><p>&gt;=1.7.4</p></td>
+      <td colspan="1" rowspan="1"><p>[Install](https://docs.vagrantup.com/v2/installation/index.html)</p></td>
+    </tr>
+
+    <tr><td colspan="1" rowspan="1"><p>Virtual Box</p></td>
+      <td colspan="1" rowspan="1"><p>&gt;= 5.0</p></td>
+      <td colspan="1" rowspan="1"><p>[Install](https://www.virtualbox.org/wiki/Downloads)</p></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<h3>To get started, do the following:</h3>
+
+<ol>
+  <li>Clone the MicroWizard project on GitHub, as well as some of the Git submodules linked into this repository:
+  </li>
+</ol>
+
+<code>
+  <p>git clone --recursive git@github.com:datawire/microwizard.git</p>
+</code>
+
+<p>
+  <em>Note: Using the --recursive flag is equivalent to running git submodule init &amp;&amp; git submodule update after a normal git clone command.
+  </em>
+</p>
+
+<p>2. Start vagrant by running vagrant up. This will take some time as the Microwizard bootstraps inside the VM, possibly as long as 15-20 minutes depending on your system - be patient, this step is automating a lot of configuration so you don't have to do it manually.</p>
+
+<p>3. Once the initial provisioning has completed run ./scripts/lobsters-up to bring up the demonstration monolith application. Note that it usually takes from 3 to 5 minutes for Lobsters to fully provision itself for use (and can take even longer at times).</p>
+
+<p>4. Go to <a href="https://www.google.com/url?q=http://127.0.0.1:3000/&amp;sa=D&amp;usg=AFQjCNEcnz03GQK9Y22x5DxV3s9vuCGCYQ">http://127.0.0.1:3000/</a> to see the Lobster application running. You'll notice that this web page has a link at the top called "Most Popular Users" - this is not normally present in a standard Lobsters install; we added it to the monolith to provide access to data from the new microservice.</p>
+
+
+<h3>The Microwizard: Microservices in Action</h3>
+
+<p>Now we’re ready for the fun part - launching a new microservice to interact with our existing Lobsters monolith application. Do the following:</p>
+
+
+<ol>
+  <li>Open up src/lobsters-popularity/popularity.py. This is our microservice. Notice that it starts a simple web server and exposes two URLs: / and /health. /health is for processing health checks and / provides the meat of the service by querying the MySQL DB used by the existing monolith for the most popular Lobsters users (as determined by karma points)</li>
+  <li>In the base deployment of the Microwizard example at <a href="https://www.google.com/url?q=http://127.0.0.1:3000/popular&amp;sa=D&amp;usg=AFQjCNGQlFrc0tY_Zq7tsjjkr1KPsc8paA">http://127.0.0.1:3000/popular</a> you'll notice that no users are displayed and the string "NO SERVICES AVAILABLE" is shown. This is because no services are deployed by default.</li>
+  <li>Let's deploy a service! Leave the popularity.py file as it is for the moment and run the following commands to launch three new lobster-popularity microservices</li>
+</ol>
+
+<code>
+  <p>./scripts/svrun lobsters-popularity lobpop_v1 UNCOMMITTED_COPY<br>
+    ./scripts/svrun lobsters-popularity lobpop_v1 UNCOMMITTED_COPY<br>
+    ./scripts/svrun lobsters-popularity lobpop_v1 UNCOMMITTED_COPY<br>
+  </p>
+</code>
+
+<p>The UNCOMMITTED_COPY argument tells the Microwizard service that it should take the current state of your repository (instead of deploying from the official system of record, the committed state within git), copy it to a new directory on the Docker host, and then mount the code as a Docker volume. Effectively this means you are running your current changes when the service starts.</p>
+
+<p>4. Once the containers are deployed, go back to <a href="https://www.google.com/url?q=http://127.0.0.1:3000/popular&amp;sa=D&amp;usg=AFQjCNGQlFrc0tY_Zq7tsjjkr1KPsc8paA">http://127.0.0.1:3000/popular</a> and you should see some data on the page including statistical information like the query speed and which service handled the request.</p>
+
+<p>5. Let's make a bad modification to our service and then deploy it to one new microservice instance without modifying the three existing instances. Open up the popularity.py file at src/lobsters-popularity/popularity.py and find the following two lines:</p>
+
+<code>
+  <p>
+    #users = inefficient_query()
+    <br>
+    users = efficient_query()
+  </p>
+</code>
+
+<p>Change the code to look like this:</p>
+
+<code>
+  <p>
+    users = inefficient_query()
+    <br>
+    #users = efficient_query()
+  </p>
+</code>
+
+<p>6. Roll out one of the poorly implemented services as follows:</p>
+<code>
+  <p>./scripts/svrun lobsters-popularity lobpop_v2 UNCOMMITTED_COPY</p>
+</code>
+<p>7. Once it is up and running, refresh the <a href="https://www.google.com/url?q=http://127.0.0.1:3000/popular&amp;sa=D&amp;usg=AFQjCNGQlFrc0tY_Zq7tsjjkr1KPsc8paA">http://127.0.0.1:3000/popular</a> page repeatedly. You should notice that occasionally the page takes a long time to load. This is because Baker Street is routing to the service with the inefficient code. Note that even though the service is operating slowly it is not causing the rest of the application to grind to a halt! You can demonstrate this by clicking on other links within the Lobsters application and noticing that they all load quickly even when the microservice page is slow.</p>
+
+<p>8. To remove the bad service run the following command:</p>
+
+<code>
+  ./scripts/svkill lobpop_v2
+</code>
+
+<p>12. Refresh the <a href="https://www.google.com/url?q=http://127.0.0.1:3000/popular&amp;sa=D&amp;usg=AFQjCNGQlFrc0tY_Zq7tsjjkr1KPsc8paA">http://127.0.0.1:3000/popular</a> page repeatedly and notice that all of the page loads are fast. The slow loads are gone because we removed the instance running the bad code.</p>
+
+<h3>The Microwizard: Architectural Details</h3>
+
+<p>JANICE: I’m experimenting a little bit with this section, so ignore for now.</p>
+
+<p>Service Discovery and Routing</p>
+
+<p>A microservices deployment is a dynamic environment, with many instances of a given microservice being added and removed.</p>
+
+<ul>
+  <li>different approaches and tradeoffs</li>
+  <li></li>
+</ul>
+
+<p>The demonstration is composed of the following pieces which all run inside Docker containers:</p>
+
+<ol><li>Lobsters Ruby on Rails application</li>
+  <li>MariaDB (open source MySQL fork)</li>
+  <li>Popularity microservice written in Python Flask.</li>
+  <li><a href="https://www.google.com/url?q=http://www.bakerstreet.io/&amp;sa=D&amp;usg=AFQjCNGwYPzLY4-np3UtZi4Vizm3KawC4w">Baker Street</a></li>
+</ol><p>The popularity microservice is written so that during initialization of each instance's container the instance is registered as alive by its local Watson component which sends the information to the Datawire Directory. The Sherlock instance we added to the Lobsters monolith subscribes to popularity service availability information and receives push notices from the Datawire Directory indicating new instances are available as each instance is brought up. Calls to the popularity microservice instances at each page reload is distributed among all of the available instances as noted in the local Sherlock.</p>
+
+<p>The popularity microservice has a directory called microwizard/ in its root project directory. This directory contains three important files that configure everything and make it all work:</p>
+
+<ol><li><code>datawire.conf</code> - configures Datawire settings</li>
+  <li><code>microwizard.yml</code> - describes the deployment to Microwizard</li>
+  <li><code>mw.sh</code> - the service initialization and startup routines.</li>
+</ol><h3>This is how it works:</h3>
+
+<ol><li>Microservice code is committed into a Git repository.</li>
+  <li>When a new service is launched the Microwizard performs a checkout against the specified Git commit.</li>
+  <li>The checked out code is moved into a directory specifically for that commit.</li>
+  <li>Microwizard then launches a container and mounts the source code as a volume on the container.</li>
+  <li>The container starts and runs the init() function in your services mw.sh</li>
+  <li>The container starts and runs the run() function in your services mw.sh</li>
+  <li>Sherlock and Watson are automatically installed on the container so when the service starts it automatically registers with the Datawire directory.</li>
+</ol><h3>Microservices in Production</h3>
+
+<p>How does the Microwizard translate into a production deployment? The Microwizard does not use production ready deployment infrastructure; in production you would want to use Amazon EC2 + AutoScalingGroups (or equivalent) or Docker + Kubernetes (or equivalent). If you have an existing application, using your existing deployment infrastructure is the common sense solution.</p>
+
+<p>The application infrastructure (HTTP and Baker Street) is simple in design and implementation. As shown in the Microwizard, this approach requires minimal changes to your existing code and infrastructure. This architecture also scales even to large numbers of microservices (Yelp, for example, uses a very similar architecture).</p>
+
+<p>There are other differences and shortcuts we took to ensure a fast and easy experience for the demonstration. For example, we turned off ssh key checking within the environment since the demo is designed to run everything locally.</p>
+
+<h3>What’s Next?</h3>
+
+<ul>
+  <li>Ready to write your own microservice? Check out Baker Street on GitHub, and give us feedback!</li>
+  <li>Contribute and give feedback on the Microwizard.</li>
+  <li>Datawire is building additional tools to address some of the other challenges in developing microservices. Sign up for our Early Access Program (LINK) to get notified when we have updates.</li>
+</ul>
+
+<hr><p><href="#ftnt_ref1" name="ftnt1">[1] There are some DNS-based service discovery and routing systems, e.g., SkyDNS, that build on top of DNS. The reference to DNS here is a pure DNS-only solution.</href="#ftnt_ref1"></p>

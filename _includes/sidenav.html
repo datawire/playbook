@@ -1,0 +1,13 @@
+<ol class="toc">
+  {% for page in site.data.playbook %}
+    {% assign page_url = page | prepend:"/playbook/" | append:"/" %}
+    {% assign p = site.playbook | where:"url",page_url | first %}
+  <li><span class="toc-heading"><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></span>
+    <ol>
+      {% for anchor in p.anchors %}
+      <li class="list-group-item"><a href="{{ site.url }}{{ p.url }}#{{anchor.name}}">{{anchor.title}}</a></li>
+      {% endfor %}
+    </ol>
+  </li>
+  {% endfor %}
+</ol>
