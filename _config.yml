@@ -9,8 +9,8 @@
 title: Datawire Microservices Playbook
 email: your-email@domain.com
 description: ''
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+baseurl: 'datawire_microservices_playbook'
+url: ''
 permalink: pretty
 
 collections:
