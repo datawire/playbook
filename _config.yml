@@ -6,9 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Datawire Microservices Playbook
-email: your-email@domain.com
-description: ''
+title: 'Datawire Docs: The Microservices Playbook'
+description: 'The Microservices Playbook'
 baseurl: '/datawire_microservices_playbook'
 url: ''
 permalink: pretty

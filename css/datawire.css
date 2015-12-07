@@ -26,9 +26,10 @@ html {
   font-size: 62.5%; }
 body {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 26px;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
+  color: rgba(0,0,0,.8);
 }
 
 nav {
@@ -41,6 +42,10 @@ nav {
 .sidenav {
     background: #fafafa;
     height: 100%;
+}
+
+img {
+    margin: 30px 0px;
 }
 
 .logo {
@@ -58,6 +63,7 @@ nav {
 
 .col-md-8.main-content {
     padding: 0px 36px;
+    max-width: 680px;
 }
 
 
@@ -68,8 +74,7 @@ html { font-size: 62.5%; }
 
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin: 30px 0px 0px;
   }
 
  ol.toc li {
@@ -101,6 +106,19 @@ h1, h2, h3, h4, h5, h6 {
      vertical-align: middle;
  }
 
+ol.toc li a {
+    color: rgba(0,0,0,.8);
+    text-decoration: none;
+}
+
+.toc-heading.title.active a {
+    color: #1EAEDB;
+}
+
+ol.toc li a:hover {
+    color: #1EAEDB;
+}
+
  span.toc-heading {
      font-weight: 500;
      font-size: 16px;
@@ -110,8 +128,10 @@ h1 {
     border: none;
     padding: 0;
     font-family: 'lato';
-    font-weight: 400;
-    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: -.01em;
+    font-size: 41px;
+    margin-top: 45px;
 }
 
 h2 {
@@ -120,15 +140,22 @@ h2 {
   color: #1EAEDB;
   text-transform: capitalize;
   letter-spacing: .010em;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 24px;
+  line-height: 34px;
+  margin: 30px 0px 15px;
 }
 
 h4 {
   font-size: 20px;
-  font-weight: 600;
+  line-height: 29px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  letter-spacing: .03em;
 }
 
 h5 {
@@ -146,6 +173,19 @@ p.intro {
     margin-bottom: 45px;
     border-bottom: 1px solid rgba(220,226,232,0.65);
     padding-bottom: 45px;
+    margin-top: 45px;
+    color: rgba(0,0,0,.8);
+}
+
+
+td p {
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.col-md-3.sidenav {
+    width: 28%;
+    min-height: 800px;
 }
 
 
@@ -156,20 +196,45 @@ p.intro {
 }
 
 p {
-  margin-top: 0;
+  margin: 0px 0px 30px;
   margin-bottom: 30px;
   }
+
+code {
+    background-color: rgba(220, 241, 249, 0.54);
+    display: inline-block;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    clear: both;
+    padding: 4px;
+    font-weight: 400;
+    color: #000001;
+    text-shadow: none;
+    font-family: 'Source Code Pro';
+    display: inline-block;
+    margin: 20px 5px 20px 0px;
+    border-bottom: 1px solid rgba(220, 241, 249, 0.91);
+    border-left: 1px solid rgba(220, 241, 249, 0.4);
+    border-right: 1px solid rgba(220, 241, 249, 0.4);
+    border-top: 1px solid rgba(220, 241, 249, 0.19);
+}
+
+ul li {
+    list-style-type: circle;
+}
 
 
 /* Links
 -------------------------------------------------- */
 a {
-  color: #1EAEDB; }
+  color: #1EAEDB;
+  }
 a:hover {
   color: #0FA0CE; }
 
   ::selection {
-      /* background-color: #cce2ff; */
+      background-color: #dddddd;
       color: rgba(0,0,0,.8);
   }
 
@@ -302,7 +367,6 @@ label > .label-body {
 ul {
   list-style: circle inside; }
 ol {
-  list-style: decimal-outside;
   }
 ol, ul {
   padding-left: 0;
@@ -342,14 +406,7 @@ code, code p {
   display: inline-block;
 }
 
-code p {
-    background-color: #dcf1f9;
-    display: inline-block;
-    padding: 15px 25px;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 18px;
-}
+code p {margin-bottom: 0px;}
 
 pre > code {
   display: block;
@@ -365,13 +422,49 @@ th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
+  border-bottom: 1px solid #E1E1E1;
+  border-right: 1px solid #e1e1e1;
+  }
 th:first-child,
 td:first-child {
-  padding-left: 0; }
+  padding-left: 0;
+  }
 th:last-child,
 td:last-child {
   padding-right: 0; }
+
+  table {
+    position: relative;
+    background-color: #FFF;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  table thead tr th {
+    cursor: auto;
+    background-color: rgba(0,0,0,.05);
+    text-align: left;
+    color: rgba(0,0,0,.8);
+    padding: .5em .7em;
+    vertical-align: middle;
+  }
+  table thead {
+    border-bottom: 1px solid rgba(0,0,0,.03);
+  }
+  .ui.table thead th:first-child {
+    border-radius: 5px 0 0;
+}
+
+td:last-child {
+    border-right: 0px;
+}
 
 
 /* Spacing
@@ -384,16 +477,8 @@ textarea,
 select,
 fieldset {
   margin-bottom: 1.5rem; }
-pre,
-blockquote,
-dl,
-figure,
-table,
-p,
-ul,
-ol,
-form {
-  margin-bottom: 20px;
+pre, blockquote, dl, figure, table, p, ul, ol, form {
+  margin-bottom: 30px;
   padding: 0px;
   }
 
