@@ -1,10 +1,6 @@
 <ol class="toc">
-  {% for page in site.playbook %}
-    <p>{{page.url}}</p>
-  {% endfor %}
   {% for page in site.data.playbook %}
     {% assign page_url = page | prepend:"/playbook/" | append:"/" %}
-    <p>{{page_url}}</p>
     {% assign p = site.playbook | where:"url",page_url | first %}
   <li><span class="toc-heading"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></span>
     <ol>
