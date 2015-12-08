@@ -1,8 +1,8 @@
 <ol class="toc ui.menu accordion">
-  {% for page in site.data.playbook %}
-    {% assign page_url = page | prepend:"/playbook/" | append:"/" %}
-    {% assign p = site.playbook | where:"url",page_url | first %}
-    {% if page_url == page.url %}
+  {% for item in site.data.playbook %}
+    {% assign item_url = item | prepend:"/playbook/" | append:"/" %}
+    {% assign p = site.playbook | where:"url",item_url | first %}
+    {% if item_url == page.url %}
       {% assign c = "active" %}
     {% else %}
       {% assign c = "" %}
