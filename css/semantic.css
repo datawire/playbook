@@ -3024,8 +3024,8 @@ body>.ui.grid {
 
 @font-face {
     font-family: 'Basic Icons';
-    src: url(../fonts/basic.icons.eot);
-    src: url(../fonts/basic.icons.eot?#iefix) format('embedded-opentype'),url(../fonts/basic.icons.svg#basic.icons) format('svg'),url(../fonts/basic.icons.woff) format('woff'),url(../fonts/basic.icons.ttf) format('truetype');
+    src: url(assets/fonts/basic.icons.eot);
+    src: url(assets/fonts/basic.icons.eot?#iefix) format('embedded-opentype'),url(assets/fonts/basic.icons.svg#basic.icons) format('svg'),url(assets/fonts/basic.icons.woff) format('woff'),url(assets/fonts/basic.icons.ttf) format('truetype');
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
@@ -5280,8 +5280,8 @@ h5.ui.header {
 
 @font-face {
     font-family: Icons;
-    src: url(../fonts/icons.eot);
-    src: url(../fonts/icons.eot?#iefix) format('embedded-opentype'),url(../fonts/icons.svg#icons) format('svg'),url(../fonts/icons.woff) format('woff'),url(../fonts/icons.ttf) format('truetype');
+    src: url(assets/fonts/icons.eot);
+    src: url(assets/fonts/icons.eot?#iefix) format('embedded-opentype'),url(assets/fonts/icons.svg#icons) format('svg'),url(assets/fonts/icons.woff) format('woff'),url(assets/fonts/icons.ttf) format('truetype');
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
