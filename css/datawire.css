@@ -16,7 +16,6 @@
 - Media Queries
 */
 
-
 /* Base Styles
 -------------------------------------------------- */
 /* NOTE
@@ -24,6 +23,7 @@ html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
+
 body {
   font-size: 16px;
   line-height: 26px;
@@ -32,10 +32,46 @@ body {
   color: rgba(0,0,0,.8);
 }
 
-nav {
+nav.main-nav {
+  position: relative;
   min-height: 60px;
   background: white;
   border-bottom: 1px solid #eaeaea;
+  margin-bottom: 0;
+}
+
+.sidenav {
+  display: none;
+}
+
+.navbar-toggle {
+  margin-left: 15px;
+  float: none;
+}
+
+.navbar-collapse {
+  background: #fafafa;
+}
+
+.navbar-collapse ol.toc {
+  padding: 6px 30px;
+}
+
+@media (min-width: 992px) {
+  .small-nav {
+    display: none;
+  }
+  .sidenav {
+    display: block;
+  }
+}
+
+.navbar-header button {
+  border: 1px solid #7c868d;
+}
+
+.navbar-header .icon-bar {
+  border: 1px solid #7c868d;
 }
 
 
@@ -44,7 +80,7 @@ nav {
     height: 100%;
 }
 
-img {
+.page-content img {
     margin: 30px 0px;
 }
 
@@ -56,13 +92,13 @@ img {
 
 .docs-icon {
     position: absolute;
-    right: 200px;
+    right: 10%;
     top: 0px;
     width: 80px;
 }
 
-.col-md-8.main-content {
-    padding: 0px 36px;
+.main-content {
+    padding: 0px 21px;
     max-width: 680px;
 }
 
@@ -124,6 +160,10 @@ ol.toc li a:hover {
      font-size: 16px;
  }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+}
+
 h1 {
     border: none;
     padding: 0;
@@ -184,11 +224,8 @@ td p {
 }
 
 .col-md-3.sidenav {
-    width: 28%;
     min-height: 800px;
 }
-
-
 
 /* Larger than phablet */
 @media (min-width: 550px) {
