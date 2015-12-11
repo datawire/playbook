@@ -1,2 +1,10 @@
-- microservices-playbook
-- the-microwizard
+- title: microservices-playbook
+  children:
+  - should-i-adopt
+  - how-do-i-adopt
+  - how-your-stack-changes
+- title: the-microwizard
+  children:
+  - getting-everything-setup
+  - microservices-in-action
+  - architectural-details

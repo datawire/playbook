@@ -1,0 +1,10 @@
+<div class="section-nav">
+  {% if page.previous != '' %}
+  {% assign link_url = page.previous | prepend:"/playbook/" | append:"/" %}
+  <a href="{{ link_url }}">Back</a>
+  {% endif %}
+  {% if page.next != ''  %}
+  {% assign link_url = page.next | prepend:"/playbook/" | append:"/" %}
+  <a href="{{ link_url }}" class="pull-right">Next</a>
+  {% endif %}
+</div>

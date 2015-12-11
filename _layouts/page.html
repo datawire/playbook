@@ -8,7 +8,12 @@ layout: default
     </div>
     <div class="col-md-8">
       <div class="main-content">
+        <div class="pull-right">
+          {% include section-nav.html %}
+        </div>
+        <h2>{{page.title}}</h2>
         {{content}}
+        {% include section-nav.html %}
       </div>
     </div>
   </div>
