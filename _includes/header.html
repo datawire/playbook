@@ -17,28 +17,7 @@
       </button>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ol class="toc">
-        {% for item in site.data.playbook %}
-        {% assign item_url = item | prepend:"/playbook/" | append:"/" %}
-        {% assign p = site.playbook | where:"url",item_url | first %}
-        {% if item_url == page.url %}
-        {% assign show_subs = 'true' %}
-        {% assign c = "active" %}
-        {% else %}
-        {% assign c = "" %}
-        {% assign show_subs = 'false' %}
-        {% endif %}
-        <li class="{{c}}"><span class="toc-heading title {{c}}"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></span>
-          {% if show_subs == 'true' %}
-          <ol>
-            {% for anchor in p.anchors %}
-            <li><a href="{{ site.baseurl }}{{ p.url }}#{{anchor.name}}">{{anchor.title}}</a></li>
-            {% endfor %}
-          </ol>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ol>
+      {% include toc-navbar.html %}
     </div><!--/.nav-collapse -->
   </div><!--/.container-fluid -->
 </nav>
