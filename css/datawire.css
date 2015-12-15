@@ -82,6 +82,7 @@ nav.main-nav {
 
 .page-content img {
     margin: 30px 0px;
+    max-width: 100%;
 }
 
 .logo {

@@ -14,6 +14,8 @@ By default, Microwizard ships with and uses an existing Ruby on Rails applicatio
 
 The Microwizard uses the following simplified technology stack:
 
+![Microwizard Stack](/images/microwizard.png)
+
 The Microwizard uses both Ruby on Rails (for the monolith) and Python/Flask (for the microservice). The services are connected directly using HTTP, which is sufficient for a small scale microservices deployment. <a href="https://www.google.com/url?q=http://bakerstreet.io&amp;sa=D&amp;usg=AFQjCNGfCgcuxm9MTRgV-kfmGoiyuM7qhQ">Baker Street</a> is used for service discovery and routing, as it provides a simple setup and configuration experience. The monolith, popularity microservice, and database are all deployed in individual Docker containers.
 
 The Microwizard simplifies a few components of the technology stack in the interest of simplicity, as noted above. It’s deployed on a single Vagrant virtual machine. It also does not deploy a resource management framework such as Kubernetes or Docker Swarm. Both of these issues would need to be addressed in a production architecture.
