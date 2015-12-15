@@ -2,8 +2,6 @@
 layout: page
 title: 'From Monolith to Microservices'
 ---
-### From Monolith to Microservices
-
 Few organizations adopt a microservice architecture all at once. Much more common is an organization that has developed a functional cloud application (“the monolith”) and incrementally adopts microservices. A thoughtful, incremental approach to adopting microservices can have a significant impact on the success of a microservices architecture.
 
 ### A Resilient Microservice
