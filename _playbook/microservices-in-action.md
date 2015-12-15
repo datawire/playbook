@@ -1,9 +1,6 @@
 ---
 layout: page
 title: 'Microservices In Action'
-parent: the-microwizard
-previous: getting-everything-setup
-next: architectural-details
 ---
 Now we’re ready for the fun part - launching a new microservice to interact with our existing Lobsters monolith application. Do the following:
 

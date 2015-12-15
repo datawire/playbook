@@ -1,9 +1,6 @@
 ---
 layout: page
 title: 'How Do I Adopt?'
-parent: microservices-playbook
-previous: should-i-adopt
-next: how-your-stack-changes
 ---
 #### What is involved in adopting microservices?
 

@@ -1,9 +1,6 @@
 ---
 layout: page
 title: 'What are microservices?'
-parent: microservices-playbook
-previous: ''
-next: should-i-adopt
 ---
 Microservices is a software architecture that is gaining rapid adoption by cloud native companies. Popularized by companies such as Netflix, Gilt Groupe, Twitter, and HubSpot, microservices enable organizations to dramatically shorten the time required to bring new functionality to market. Traditional cloud applications were built and deployed as a single unit. With microservices, software applications are built as a set of loosely coupled, self-contained services that connect to each other over a network. Ultimately, microservices can accelerate innovation, as they empower small development teams to quickly test and iterate with real market feedback and data.
 

@@ -1,0 +1,23 @@
+{% assign found_parent = 'false' %}
+{% assign parent = '' %}
+{% for item in site.data.playbook %}
+  {% assign item_url = item.title | prepend:"/playbook/" | append:"/" %}
+
+  {% if found_parent == 'false' %}
+    {% assign parent = item %}
+  {% else %}
+    {% break %}
+  {% endif %}
+
+  {% if item_url == page.url %}
+    {% assign found_parent = 'true' %}
+  {% endif %}
+
+  {% for child in item.children %}
+    {% assign child_url = child | prepend:"/playbook/" | append:"/" %}
+    {% if child_url == page.url %}
+      {% assign found_parent = 'true' %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}

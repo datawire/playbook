@@ -1,8 +1,6 @@
 ---
 layout: page
 title: 'The Microwizard'
-previous: how-your-stack-changes
-next: getting-everything-setup
 ---
 ### From Monolith to Microservices
 

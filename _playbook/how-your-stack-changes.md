@@ -1,9 +1,6 @@
 ---
 layout: page
 title: 'How Your Stack Changes'
-parent: microservices-playbook
-previous: how-do-i-adopt
-next: the-microwizard
 ---
 #### The new DevOps/Microservices stack.
 

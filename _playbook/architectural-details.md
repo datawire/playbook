@@ -1,9 +1,6 @@
 ---
 layout: page
 title: 'Architectural Details'
-parent: the-microwizard
-previous: microservices-in-action
-next: ''
 ---
 JANICE: I’m experimenting a little bit with this section, so ignore for now.
 

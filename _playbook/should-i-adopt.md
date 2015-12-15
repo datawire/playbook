@@ -1,9 +1,6 @@
 ---
 layout: page
 title: 'Should I Adopt?'
-parent: microservices-playbook
-previous: microservices-playbook
-next: how-do-i-adopt
 ---
 Today, organizations considering adopting microservices should make this decision based on three criteria:
 

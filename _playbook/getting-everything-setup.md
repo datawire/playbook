@@ -1,9 +1,6 @@
 ---
 layout: page
 title: 'Getting Everything Set Up'
-parent: the-microwizard
-previous: the-microwizard
-next: microservices-in-action
 ---
 The Microwizard base system runs inside of a VirtualBox VM. We provision the VM using Vagrant and then use a combination of shell scripts, Ansible playbooks, and custom code to smooth over the experience. Developers must be running a modern Linux distribution or Mac OS X (we’ve tested on Fedora 22 and OS 10.10 Yosemite) and should have the following software installed before trying to use Datawire Microwizard:
 
