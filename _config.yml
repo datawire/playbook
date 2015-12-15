@@ -8,7 +8,7 @@
 # Site settings
 title: 'Datawire Docs: The Microservices Playbook'
 description: 'The Microservices Playbook'
-baseurl: '/datawire_microservices_playbook'
+baseurl: '/playbook'
 url: ''
 permalink: pretty
 
