@@ -164,7 +164,7 @@ ol.toc li a {
     text-decoration: none;
 }
 
-.sidenav .active a {
+.sidenav .active a, .toc .active a {
     color: #1EAEDB;
 }
 
