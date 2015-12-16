@@ -4,8 +4,12 @@ title: 'Microservices In Action'
 ---
 Now we’re ready for the fun part - launching a new microservice to interact with our existing Lobsters monolith application. Do the following:
 
-1. Open up src/lobsters-popularity/popularity.py. This is our microservice. Notice that it starts a simple web server and exposes two URLs: / and /health. /health is for processing health checks and / provides the meat of the service by querying the MySQL DB used by the existing monolith for the most popular Lobsters users (as determined by karma points)
-2. In the base deployment of the Microwizard example at <a href="https://www.google.com/url?q=http://127.0.0.1:3000/popular&amp;sa=D&amp;usg=AFQjCNGQlFrc0tY_Zq7tsjjkr1KPsc8paA">http://127.0.0.1:3000/popular</a> you'll notice that no users are displayed and the string "NO SERVICES AVAILABLE" is shown. This is because no services are deployed by default.
+1. Open up src/lobsters-popularity/popularity.py. This is our microservice. There are a few things to note:
+
+* It uses Flask. A microservice can be written in any application framework or runtime. You don't need anything special here.
+* It expoes two URLs: / and /health. /health is for processing health checks and / provides the meat of the service by querying the MySQL DB used by the existing monolith for the most popular Lobsters users (as determined by karma points)
+
+2. In the base deployment of the Microwizard example at <a href="http://127.0.0.1:3000/popular">http://127.0.0.1:3000/popular</a> you'll notice that no users are displayed and the string "NO SERVICES AVAILABLE" is shown. This is because no services are deployed by default.
 3. Let's deploy a service! Leave the popularity.py file as it is for the moment and run the following commands to launch three new lobster-popularity microservices
 ```
 ./scripts/svrun lobsters-popularity lobpop_v1 UNCOMMITTED_COPY

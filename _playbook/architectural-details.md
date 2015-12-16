@@ -2,8 +2,6 @@
 layout: page
 title: 'Architectural Details'
 ---
-JANICE: I’m experimenting a little bit with this section, so ignore for now.
-
 Service Discovery and Routing
 
 A microservices deployment is a dynamic environment, with many instances of a given microservice being added and removed.
@@ -15,7 +13,7 @@ The demonstration is composed of the following pieces which all run inside Docke
 1. Lobsters Ruby on Rails application
 2. MariaDB (open source MySQL fork)
 3. Popularity microservice written in Python Flask.
-4. <a href="https://www.google.com/url?q=http://www.bakerstreet.io/&amp;sa=D&amp;usg=AFQjCNGwYPzLY4-np3UtZi4Vizm3KawC4w">Baker Street</a>
+4. <a href="http://bakerstreet.io">Baker Street</a>
 
 The popularity microservice is written so that during initialization of each instance's container the instance is registered as alive by its local Watson component which sends the information to the Datawire Directory. The Sherlock instance we added to the Lobsters monolith subscribes to popularity service availability information and receives push notices from the Datawire Directory indicating new instances are available as each instance is brought up. Calls to the popularity microservice instances at each page reload is distributed among all of the available instances as noted in the local Sherlock.
 
