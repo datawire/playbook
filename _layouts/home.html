@@ -1,10 +1,9 @@
 ---
 layout: default
 ---
-{% include section-nav-logic.html %}
-<div class="pull-right">
+{% assign previous_url = "" %}
+{% assign next_url = site.data.playbook.first.title | prepend:"/playbook/" | append:"/" %}
 {% include section-nav.html %}
-</div>
 <h2>{{page.title}}</h2>
 {{content}}
 {% include section-nav.html %}

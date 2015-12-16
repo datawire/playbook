@@ -1,7 +1,5 @@
 ---
-layout: page
-previous: ''
-next: 'microservices-playbook'
+layout: home
 ---
 #The Microservices Playbook
 
