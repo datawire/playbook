@@ -12,9 +12,9 @@ The Microwizard base system runs inside of a VirtualBox VM. We provision the VM 
 
 ### To get started, do the following:
 
-1. Clone the MicroWizard project on GitHub, as well as some of the Git submodules linked into this repository:
-  `git clone --recursive git@github.com:datawire/microwizard.git1`
+1. Clone the Microwizard project on GitHub, as well as some of the Git submodules linked into this repository:
+  `git clone --recursive git@github.com:datawire/microwizard.git`
   _Note: Using the --recursive flag is equivalent to running git submodule init &amp;&amp; git submodule update after a normal git clone command._
 2. Start vagrant by running vagrant up. This will take some time as the Microwizard bootstraps inside the VM, possibly as long as 15-20 minutes depending on your system - be patient, this step is automating a lot of configuration so you don't have to do it manually.
 3. Once the initial provisioning has completed run ./scripts/lobsters-up to bring up the demonstration monolith application. Note that it usually takes from 3 to 5 minutes for Lobsters to fully provision itself for use (and can take even longer at times).
-4. Go to <a href="https://www.google.com/url?q=http://127.0.0.1:3000/&amp;sa=D&amp;usg=AFQjCNEcnz03GQK9Y22x5DxV3s9vuCGCYQ">http://127.0.0.1:3000/</a> to see the Lobster application running. You'll notice that this web page has a link at the top called "Most Popular Users" - this is not normally present in a standard Lobsters install; we added it to the monolith to provide access to data from the new microservice.
+4. Go to <a href="http://127.0.0.1:3000/">http://127.0.0.1:3000/</a> to see the Lobster application running. You'll notice that this web page has a link at the top called "Most Popular Users" - this is not normally present in a standard Lobsters install; we added it to the monolith to provide access to data from the new microservice.

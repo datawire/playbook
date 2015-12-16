@@ -2,12 +2,6 @@
 layout: page
 title: 'Architectural Details'
 ---
-Service Discovery and Routing
-
-A microservices deployment is a dynamic environment, with many instances of a given microservice being added and removed.
-
-* different approaches and tradeoffs
-
 The demonstration is composed of the following pieces which all run inside Docker containers:
 
 1. Lobsters Ruby on Rails application
@@ -23,7 +17,7 @@ The popularity microservice has a directory called microwizard/ in its root proj
 2. `microwizard.yml` - describes the deployment to Microwizard
 3. `mw.sh` - the service initialization and startup routines.
 
-### This is how it works:
+### How it works
 
 1. Microservice code is committed into a Git repository.
 2. When a new service is launched the Microwizard performs a checkout against the specified Git commit.
@@ -33,20 +27,13 @@ The popularity microservice has a directory called microwizard/ in its root proj
 6. The container starts and runs the run() function in your services mw.sh
 7. Sherlock and Watson are automatically installed on the container so when the service starts it automatically registers with the Datawire directory.
 
+
+
 ### Microservices in Production
 
 How does the Microwizard translate into a production deployment? The Microwizard does not use production ready deployment infrastructure; in production you would want to use Amazon EC2 + AutoScalingGroups (or equivalent) or Docker + Kubernetes (or equivalent). If you have an existing application, using your existing deployment infrastructure is the common sense solution.
 
-The application infrastructure (HTTP and Baker Street) is simple in design and implementation. As shown in the Microwizard, this approach requires minimal changes to your existing code and infrastructure. This architecture also scales even to large numbers of microservices (Yelp, for example, uses a very similar architecture).
+The application infrastructure (HTTP and Baker Street) is simple in design and implementation. As shown in the Microwizard, this approach requires minimal changes to your existing code and infrastructure. In practice, additional resilience semantics such as timeouts or circuit breakers should be layered on HTTP. These can be added via a library such as <a href="https://github.com/Netflix/Hystrix/">Hystrix</a> or through a proxy such as Baker Street.
 
 There are other differences and shortcuts we took to ensure a fast and easy experience for the demonstration. For example, we turned off ssh key checking within the environment since the demo is designed to run everything locally.
 
-### What’s Next?
-
-* Ready to write your own microservice? Check out Baker Street on GitHub, and give us feedback!
-* Contribute and give feedback on the Microwizard.
-* Datawire is building additional tools to address some of the other challenges in developing microservices. Sign up for our Early Access Program (LINK) to get notified when we have updates.
-
-<hr>
-
-<href="#ftnt_ref1" name="ftnt1">[1] There are some DNS-based service discovery and routing systems, e.g., SkyDNS, that build on top of DNS. The reference to DNS here is a pure DNS-only solution.</href="#ftnt_ref1">
