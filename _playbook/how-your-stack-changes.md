@@ -31,7 +31,8 @@ In the microservices stack, the deployment infrastructure changes:
 A microservice stack also introduces several new service-level technologies. These technologies are used to add service-level resilience so that the unavailability of a given microservice has no effect on the overall system behavior.
 
 
-* A service discovery and routing framework is used to route traffic between microservices. A service discovery and routing framework provides a real-time view of service availability via health checks, and can use that information to dynamically route traffic to available microservices. While DNS can be used for service discovery, it typically isn’t directly used due to propagation delays, lack of native health checks, and limited control over routing.<sup>[1]</sup>
+* A service discovery and routing framework is used to route traffic between microservices. A service discovery and routing framework provides a real-time view of service availability via health checks, and can use that information to dynamically route traffic to available microservices. While DNS can be used for service discovery, it typically isn’t directly used due to propagation delays, lack of native health checks, and limited control over routing.
+
 * An application protocol that provides efficient and reliable communication is deployed to connect microservices. Unlike HTTP, a microservices application protocol is non-blocking, and also introduces other behaviors such as timeouts and retries to improve resilience.
 
 Do you need all of these pieces to start adopting microservices? Not at all. In the next example, we’ll show an example application built using a microservices architecture.
