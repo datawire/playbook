@@ -413,6 +413,7 @@ label > .label-body {
 ul {
   list-style: circle inside; }
 ol {
+  margin: 1.5rem 0 1.5rem 3rem;
   }
 ol, ul {
   padding-left: 0;
@@ -451,7 +452,9 @@ code, code p {
   display: inline-block;
 }
 
-code p {margin-bottom: 0px;}
+li code { margin: 0; }
+
+code p { margin-bottom: 0px; }
 
 pre > code {
   display: block;
