@@ -8,11 +8,6 @@ Similarly, adopting a microservices architecture should be an organic, iterative
 
 <table>
   <tr>
-   <th>&nbsp;</th>
-   <th>Bottoms up</th>
-   <th>Top down</th>
-  </tr>
-  <tr>
    <td>Adoption strategy</td>
    <td>Developer led</td>
    <td>CTO driven</td>
