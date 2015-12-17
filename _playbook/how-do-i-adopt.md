@@ -2,23 +2,27 @@
 layout: page
 title: 'How Do I Adopt?'
 ---
-In a microservices architecture, individual development teams are empowered to make their own technoogy decisions. By decentralizing architectural governance, teams are able to rapidly make technical decisions and move forward.
+
+#### A developer led, incremental strategy for adopting microservices gives the best chance for success.
+
+
+In a microservices architecture, individual development teams are empowered to make their own technology decisions. By decentralizing architectural governance, teams are able to rapidly make technical decisions and move forward.
 
 Similarly, adopting a microservices architecture should be an organic, iterative process driven from the bottom up. Consider the difference in these approaches:
 
 <table>
   <tr>
-   <td>Adoption strategy</td>
+   <td><b>Adoption strategy</b></td>
    <td>Developer led</td>
    <td>CTO driven</td>
   </tr>
   <tr>
-   <td>Technology strategy</td>
+   <td><b>Technology strategy</b></td>
    <td>Leverage existing stack</td>
    <td>Replace existing stack</td>
   </tr>
   <tr>
-   <td>Standards strategy</td>
+   <td><b>Standards strategy</b></td>
    <td>Great developer experience</td>
    <td>Architectural standards</td>
   </tr>
