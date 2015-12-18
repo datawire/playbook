@@ -1,29 +1,21 @@
 ---
 layout: page
-title: 'From Monolith to Microservices'
+title: 'The Microwizard'
 ---
-A thoughtful, incremental approach to adopting microservices can have a significant impact on the success of a microservices architecture. In this chapter, we'll discuss one such incremental approach.
+The Microwizard base system runs inside of a VirtualBox VM. We provision the VM using Vagrant and then use a combination of shell scripts, Ansible playbooks, and custom code to smooth over the experience. Developers must be running a modern Linux distribution or Mac OS X (we’ve tested on Fedora 22 and OS 10.10 Yosemite) and should have the following software installed before trying to use Datawire Microwizard:
 
-### A Resilient Microservice
 
-We'll start with deploying a single, resilient microservice that is connected to the monolith. Why resilience?
+| Software    | Version    | Instructions |
+| ----------- | ---------- | ------------ |
+| Ansible     | &gt;=1.9.4 | `sudo pip install ansible` or see the official [install](http://docs.ansible.com/ansible/intro_installation.html) instructions |
+| Vagrant     | &gt;=1.7.4 | [Install instructions](https://docs.vagrantup.com/v2/installation/index.html) |
+| Virtual Box | &gt;= 5.0  |[Install instructions](https://www.virtualbox.org/wiki/Downloads) |
 
-1. A new microservice should not impact the availability of the overall service. For example, a monolith-based service that has 99.99% availability would have 99.98% availability (99.99<sup>2</sup>%) when an additional microservice is added unless resilience is designed into the architecture.
+### To get started, do the following:
 
-2. Developers need to be able to iterate and deploy the microservice independently of the monolith. A resilient microservice insures that the impact of any microservice changes are isolated from the monolith.
-
-### The Microwizard
-
-We've created a simple project, <a href="https://github.com/datawire/microwizard">the Microwizard</a>, which illustrates adding a single resilient microservice to an existing monolith. The Microwizard is set up as a <a href="https://www.vagrantup.com">Vagrant VM</a>.
-
-The Microwizard is a Getting Started tool for developers with no experience with microservice architectures who want to learn more about them. It lets you get your feet wet and see some of the benefits of microservices by starting with a common adoption pattern: adding a single microservice to an existing monolith (as the first step in migrating from a monolith to a microservices architecture). This enables more rapid feature development of the new service without any possibility of unintentionally inducing bugs into the existing code.
-
-By default, Microwizard ships with and uses an existing Ruby on Rails application named <a href="https://github.com/jcs/lobsters">Lobsters</a> as the demonstration monolith. We will walk you through how to add new functionality to the main Lobsters application by creating a microservice in Python (you do not need to know Python to understand this example).
-
-The Microwizard uses the following simplified technology stack:
-
-![Microwizard Stack]({{site.baseurl}}/images/microwizard.png)
-
-The Microwizard uses both Ruby on Rails (for the monolith) and Python/Flask (for the microservice). <a href="http://bakerstreet.io">Baker Street</a> is used for the services layer. Baker Street provides a resilient service discovery and routing framework over HTTP, and connects the different services in the Microwizard. The monolith, popularity microservice, and database are all deployed in individual Docker containers.
-
-The Microwizard simplifies a few components of the technology stack in the interest of simplicity, as noted above. It’s deployed on a single Vagrant virtual machine. It also does not deploy a resource management framework such as Kubernetes or Docker Swarm. Both of these issues would need to be addressed in a production architecture.
+1. Clone the Microwizard project on GitHub, as well as some of the Git submodules linked into this repository:<br><br>
+  `git clone --recursive git@github.com:datawire/microwizard.git`<br><br>
+  _Note: Using the --recursive flag is equivalent to running git submodule init &amp;&amp; git submodule update after a normal git clone command._
+2. Start vagrant by running `vagrant up`. This will take some time as the Microwizard bootstraps inside the VM, possibly as long as 15-20 minutes depending on your system. Be patient, as this step is automating a lot of configuration so you don't have to do it manually.
+3. Once the initial provisioning has completed run `./scripts/lobsters-up` to bring up the demonstration monolith application. Note that it usually takes from 3 to 5 minutes for Lobsters to fully provision itself for use (and can take even longer at times).
+4. Go to <a href="http://127.0.0.1:3000/">http://127.0.0.1:3000/</a> to see the Lobster application running. You'll notice that this web page has a link at the top called "Most Popular Users" - this is not normally present in a standard Lobsters install; we added it to the monolith to provide access to data from the new microservice.

@@ -3,9 +3,9 @@
   - should-i-adopt
   - how-do-i-adopt
   - how-your-stack-changes
-- title: the-microwizard
+- title: from-monolith-to-microservices
   children:
-  - getting-everything-setup
+  - the-microwizard
   - microservices-in-action
   - architectural-details
 - title: whats-next
