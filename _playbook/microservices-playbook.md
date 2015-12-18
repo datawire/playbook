@@ -10,4 +10,4 @@ For example, the Twitter homepage consists of dozens of microservices, including
 
 ####Isn’t this just SOA?
 
-Many people frequently point out that the core concepts of microservices were pioneered in service oriented architectures (SOA). While there are some technical similarities between microservices and SOA, microservices is focused on a different class of problems -- how to (organizationally, computationally) scale your cloud-native application architecture -- and takes advantage of cloud and DevOps technologies to create a more powerful, flexible approach to software architecture for cloud-native applications.
+Many people frequently point out that the core concepts of microservices were pioneered in service oriented architectures (SOA). While there are some technical similarities between microservices and SOA, microservices is focused on a different class of problems -- how to organizationally and computationally scale your cloud-native application architecture -- and takes advantage of cloud and DevOps technologies to create a more powerful, flexible approach to software architecture for cloud-native applications.
