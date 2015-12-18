@@ -33,7 +33,7 @@ The popularity microservice has a directory called microwizard/ in its root proj
 
 How does the Microwizard translate into a production deployment? The Microwizard does not use production ready deployment infrastructure; in production you would want to use Amazon EC2 + AutoScalingGroups (or equivalent) or Docker + Kubernetes (or equivalent). If you have an existing application, using your existing deployment infrastructure is the common sense solution.
 
-The application infrastructure (HTTP and Baker Street) is simple in design and implementation. As shown in the Microwizard, this approach requires minimal changes to your existing code and infrastructure. In practice, additional resilience semantics such as timeouts or circuit breakers should be layered on HTTP. These can be added via a library such as <a href="https://github.com/Netflix/Hystrix/">Hystrix</a> or through a proxy such as Baker Street.
+The services layer, built around HTTP and Baker Street, is simple in design and implementation. As shown in the Microwizard, this approach requires minimal changes to your existing code and infrastructure. In practice, additional resilience semantics such as timeouts or circuit breakers should be layered on HTTP. These can be added via a library such as <a href="https://github.com/Netflix/Hystrix/">Hystrix</a> or by adding timeouts to the Baker Street HAproxy configuration.
 
 There are other differences and shortcuts we took to ensure a fast and easy experience for the demonstration. For example, we turned off ssh key checking within the environment since the demo is designed to run everything locally.
 
