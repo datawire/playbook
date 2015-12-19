@@ -7,24 +7,6 @@
     border: none;
     /* button styling */
     padding: 8px 12px 6px;
-    color: white;
-    font-weight: bold;
-    text-shadow: 0 1px 0 rgba(44, 44, 44, 1);
-    line-height: 1;
-    border-radius: 3px;
-    border-bottom: 1px solid #2C2C2C; /* datawire dark blue converted to grayscale */
-    background-color: #7C878E; /* datawire gray */
-    background-image: -webkit-linear-gradient(#AAB1B5, #7C878E);
-    background-image: linear-gradient(#AAB1B5, #7C878E);
-    box-shadow: 0 1px 2px 0 rgba(44, 44, 44, 0.3);
-}
-
-.section-nav a.section-nav-button {
-    /* override datawire.css styles */
-    padding: 0;
-    border: none;
-    /* button styling */
-    padding: 8px 12px 6px;
     color: #3C474F;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
     font-weight: bold;
