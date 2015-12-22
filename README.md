@@ -1,6 +1,6 @@
 # The Microservices Playbook
 
-A pragmatic, opinionated guide to adopting microservices. See https://datawire.github.io/playbook/ for the latest.
+A pragmatic, opinionated guide to adopting microservices. See http://playbook.microservices.com for the latest.
 
 # Building
 
