@@ -6,7 +6,7 @@ Microservices is a software architecture that is gaining rapid adoption by cloud
 
 ![Iteration Cycles]({{site.baseurl}}/images/iteration-cycles.png)
 
-For example, the Twitter homepage consists of dozens of microservices, including a “who to follow” microservice, a “trends” microservice, a “tweets” microservice, and many others -- some of which in turn call other microservices. The key to a successful microservices architecture is the loose coupling, which enables each microservice to be developed, tested, and released independently of the other microservices.
+For example, the Twitter homepage is composed through calls to dozens of microservices, including a “who to follow” microservice, a “trends” microservice, a “tweets” microservice, and many others -- some of which in turn call other microservices. The key to a successful microservices architecture is the loose coupling, which enables each microservice to be developed, tested, and released independently of the other microservices.
 
 ####Isn’t this just SOA?
 

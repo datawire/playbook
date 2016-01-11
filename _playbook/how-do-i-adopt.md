@@ -30,7 +30,7 @@ Similarly, adopting a microservices architecture should be an organic, iterative
 
 ### Adoption Strategy
 
-While some organizations have succeeded with a top-level mandate to shift to microservices, most organizations that have adopted microservices have had initiatives driven by a handful of developers. In the bottoms up scenario, the initial development team experiments with a specific development challenge, and iterates based on the specific scenario. This results in a working end-to-end use case. In a top down scenario, more upfront work occurs on standardization and technology selection -- a process that may or may not be necessary.
+While some organizations have succeeded with a top-level mandate to shift to microservices, most organizations that have adopted microservices have had initiatives driven by a handful of developers. In a bottom up scenario, the initial development team experiments with a specific development challenge, and iterates based on the specific scenario. This results in a working end-to-end use case. In a top down scenario, more upfront work occurs on standardization and technology selection -- a process that may or may not be necessary.
 
 ### Technology Strategy
 
@@ -38,5 +38,4 @@ A common misconception is that a new technology stack is required to adopt micro
 
 ### Standards Strategy
 
-The traditional approach to standardization is some sort of architectural standards, perhaps embodied in an Architectural Guide, and, in large organizations, enforced by an Architectural Review Board. Microservices eschews this heavy, cumbersome approach. Instead, microservice organizations have a fanatical focus on the developer experience. By making it as easy as possible to implement a microservice in a specific way (via powerful libraries, great documentation, example code), standards are organically adopted.
-
+The traditional approach to standardization is to create some sort of architectural rules, perhaps embodied in an Architectural Guide, and, in large organizations, enforced by an Architectural Review Board. The microservices approach eschews this heavy, cumbersome strategy. Instead, organizations successfully using microservices usually have a fanatical focus on the developer experience. By making it as easy as possible to implement a microservice in a specific way (via powerful libraries, great documentation, example code), standards are organically adopted.
