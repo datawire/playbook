@@ -39,6 +39,15 @@ nav.main-nav {
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 0;
 }
+.main-nav .navbar-nav {
+  position: absolute;
+  top: 0;
+  right: calc(10% + 105px);
+  padding-top: 12px;
+}
+.main-nav .github-button > iframe {
+  margin-top: 12px;
+}
 
 .sidenav {
   display: none;
