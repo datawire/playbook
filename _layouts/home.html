@@ -1,9 +1,0 @@
----
-layout: default
----
-{% assign previous_url = "" %}
-{% assign next_url = site.data.playbook.first.title | prepend:"/playbook/" | append:"/" %}
-{% include section-nav.html %}
-<h2>{{page.title}}</h2>
-{{content}}
-{% include section-nav.html %}
