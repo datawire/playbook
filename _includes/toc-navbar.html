@@ -1,0 +1,31 @@
+{% include assign-parent.html %}
+<ol class="toc">
+  {% for item in site.data.playbook %}
+    {% assign item_url = item.title | prepend:"/playbook/" | append:"/" %}
+    {% assign p = site.playbook | where:"url",item_url | first %}
+    {% assign cl = "" %}
+    {% if item_url == page.url %}
+      {% assign cl = "active" %}
+    {% endif %}
+    {% if item == parent %}
+      {% assign show_subs = 'true' %}
+    {% else %}
+      {% assign show_subs = 'false' %}
+    {% endif %}
+    <li><span class="toc-heading title {{cl}}"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></span>
+      {% if show_subs == 'true' %}
+      <ol>
+        {% for child in item.children %}
+          {% assign child_url = child | prepend:"/playbook/" | append:"/" %}
+          {% assign c = site.playbook | where:"url",child_url | first %}
+          {% assign cl = "" %}
+          {% if child_url == page.url %}
+            {% assign cl = "active" %}
+          {% endif %}
+        <li><span class="{{cl}}"><a href="{{ site.baseurl }}{{c.url}}">{{c.title}}</a></li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+    </li>
+    {% endfor %}
+</ol>

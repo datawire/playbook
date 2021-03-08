@@ -1,0 +1,12 @@
+<div class="section-nav">
+  {% if previous_url != '' %}
+    <a class="section-nav-button section-nav-button--prev" href="{{ site.baseurl }}{{previous_url}}">
+      <span>&laquo;</span>&nbsp;Back
+    </a>
+  {% endif %}
+  {% if next_url != '' %}
+  <a class="section-nav-button section-nav-button--next" href="{{ site.baseurl }}{{ next_url }}" class="pull-right">
+    Next&nbsp;<span>&raquo;</span>
+  </a>
+  {% endif %}
+</div>

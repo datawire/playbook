@@ -1,0 +1,593 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,100,100italic,300,300italic,400italic,500,500italic,700italic,700,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+/* Table of contents
+--------------------------------------------------
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+
+/* Base Styles
+-------------------------------------------------- */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgba(0,0,0,.8);
+}
+
+nav.main-nav {
+  position: relative;
+  min-height: 60px;
+  background: white;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 0;
+}
+.main-nav .navbar-nav {
+  position: absolute;
+  top: 0;
+  right: calc(10% + 105px);
+  padding-top: 12px;
+}
+.main-nav .github-button > iframe {
+  margin-top: 12px;
+}
+
+.sidenav {
+  display: none;
+}
+
+.navbar-toggle {
+  margin-left: 15px;
+  float: none;
+}
+
+.navbar-collapse {
+  background: #fafafa;
+}
+
+.navbar-collapse ol.toc {
+  padding: 6px 30px;
+}
+
+@media (min-width: 992px) {
+  .small-nav {
+    display: none;
+  }
+  .sidenav {
+    display: block;
+  }
+}
+
+.navbar-header button {
+  border: 1px solid #7c868d;
+}
+
+.navbar-header .icon-bar {
+  border: 1px solid #7c868d;
+}
+
+
+.sidenav {
+    background: #fafafa;
+    height: 100%;
+}
+
+.page-content img {
+    margin: 30px 0px;
+    max-width: 100%;
+}
+
+.logo {
+  width: 245px;
+  padding: 15px 0px;
+  margin: 5px 0px;
+}
+
+.docs-icon {
+    position: absolute;
+    right: 10%;
+    top: 0px;
+    width: 80px;
+}
+
+.main-content {
+    padding: 0px 21px 42px 21px;
+}
+
+.section-nav a {
+  display: inline-block;
+  padding: 0 10px;
+  border: 1px solid rgba(0,0,0,.8);
+  color: rgba(0,0,0,.8);
+}
+
+.section-nav a:first-of-type {
+  margin-right: 10px;
+}
+
+.section-nav a:hover {
+  text-decoration: none;
+  border: 1px solid #1EAEDB;
+}
+
+
+/* Typography
+*/
+
+html { font-size: 62.5%; }
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 30px 0px 0px;
+  }
+
+ ol.toc li {
+     display: list-item;
+     table-layout: fixed;
+     list-style-position: outside;
+     padding: .3em 0;
+     line-height: 1.2;
+ }
+
+
+ ol.toc {
+     counter-reset: ordered;
+     margin-left: 1.25rem;
+     list-style-type: none;
+     padding: 36px 30px;
+ }
+
+
+ ol.toc li:before {
+     position: absolute;
+     top: auto;
+     left: auto;
+     margin-left: -30px;
+     counter-increment: ordered;
+     content: counters(ordered,".") " ";
+     text-align: right;
+     color: rgba(0,0,0,.8);
+     vertical-align: middle;
+ }
+
+ol.toc li a {
+    color: rgba(0,0,0,.8);
+    text-decoration: none;
+}
+
+.sidenav .active a, .toc .active a {
+    color: #1EAEDB;
+}
+
+ol.toc li a:hover {
+    color: #1EAEDB;
+}
+
+ span.toc-heading {
+     font-weight: 500;
+     font-size: 16px;
+ }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+}
+
+h1 {
+    border: none;
+    padding: 0;
+    font-family: 'lato';
+    font-weight: 500;
+    letter-spacing: -.01em;
+    font-size: 41px;
+    margin-top: 45px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #1EAEDB;
+  text-transform: capitalize;
+  letter-spacing: .010em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 34px;
+  margin: 30px 0px 15px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  letter-spacing: .03em;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+
+p.intro {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid rgba(220,226,232,0.65);
+    padding-bottom: 45px;
+    margin-top: 45px;
+    color: rgba(0,0,0,.8);
+}
+
+.col-md-3.sidenav {
+    min-height: 800px;
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+
+}
+
+p {
+  margin: 0px 0px 30px;
+  margin-bottom: 30px;
+  }
+
+code {
+    background-color: rgba(220, 241, 249, 0.54);
+    display: inline-block;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    clear: both;
+    padding: 0 10px;
+    font-weight: 400;
+    color: #000001;
+    text-shadow: none;
+    font-family: 'Source Code Pro';
+    margin: 20px 0px;
+    border-bottom: 1px solid rgba(220, 241, 249, 0.91);
+    border-left: 1px solid rgba(220, 241, 249, 0.4);
+    border-right: 1px solid rgba(220, 241, 249, 0.4);
+    border-top: 1px solid rgba(220, 241, 249, 0.19);
+}
+
+ul li {
+    list-style-type: circle;
+}
+
+
+/* Links
+-------------------------------------------------- */
+a {
+  color: #1EAEDB;
+  }
+a:hover {
+  color: #0FA0CE; }
+
+  ::selection {
+      background-color: #dddddd;
+      color: rgba(0,0,0,.8);
+  }
+
+/* Buttons
+-------------------------------------------------- */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+
+
+/* Forms
+-------------------------------------------------- */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+
+/* Lists
+-------------------------------------------------- */
+
+
+ul {
+  list-style: circle inside; }
+ol {
+  margin: 1.5rem 0 1.5rem 3rem;
+  }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+  counter-reset: ordered;
+  }
+li {
+  margin-bottom: 1rem; }
+
+ol li {
+  display: list-item;
+  table-layout: fixed;
+  list-style-position: outside;
+  padding: .3em 0;
+  line-height: 1.5;
+  }
+}
+
+/* Code
+-------------------------------------------------- */
+code, code p {
+  padding: 5px 8px;
+  margin: 15px 5px;
+  font-size: 90%;
+  white-space: nowrap;
+  background-color: #ffefd1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  font-family: "Source Code Pro";
+  display: inline-block;
+}
+
+li code { margin: 0; }
+
+code p { margin-bottom: 0px; }
+
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; }
+
+
+
+
+/* Tables
+-------------------------------------------------- */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1;
+  border-right: 1px solid #e1e1e1;
+  }
+  table {
+    position: relative;
+    background-color: #FFF;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  table thead tr th {
+    cursor: auto;
+    background-color: rgba(0,0,0,.05);
+    text-align: left;
+    color: rgba(0,0,0,.8);
+    padding: .5em .7em;
+    vertical-align: middle;
+  }
+  table thead {
+    border-bottom: 1px solid rgba(0,0,0,.03);
+  }
+  .ui.table thead th:first-child {
+    border-radius: 5px 0 0;
+}
+
+td:last-child {
+    border-right: 0px;
+}
+
+
+/* Spacing
+-------------------------------------------------- */
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre, blockquote, dl, figure, table, p, ul, ol, form {
+  margin-bottom: 30px;
+  padding: 0px;
+  }
+
+
+/* Utilities
+-------------------------------------------------- */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+
+
+/* Misc
+-------------------------------------------------- */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+
+
+/* Clearing
+-------------------------------------------------- */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+
+/* Media Queries
+-------------------------------------------------- */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}

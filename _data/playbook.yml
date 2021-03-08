@@ -1,0 +1,11 @@
+- title: microservices-playbook
+  children:
+  - should-i-adopt
+  - how-do-i-adopt
+  - how-your-stack-changes
+- title: from-monolith-to-microservices
+  children:
+  - the-microwizard
+  - microservices-in-action
+  - architectural-details
+- title: whats-next
